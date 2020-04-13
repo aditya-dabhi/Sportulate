@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/home.css' %}">
+        <title>Sportulate - Match Predictions</title>
+    </head>
+    <body>
+
+        <div class="back">
+            <img src="{% static 'images/logo1.jpg' %}" class="img-fluid rounded mx-auto d-block">
+
+            <div class="container margin">
+
+              <div class="row">
+
+                <div class="col">
+                  <div class="card text-white bg-dark mb-3" style="text-align: center;">
+                    <div class="card-body">
+                      <img src="{% static 'images/basketballcard.jpg' %}" class="card-img-top">
+                      <h5 class="card-title">Basketball</h5>
+                      <p class="card-text">Predict the result of upcoming NBA action thriller.</p>
+                      <a href="#" class="btn btn-primary">Predict</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card text-white bg-dark mb-3" style="text-align: center;">
+                    <div class="card-body">
+                      <img src="{% static 'images/cricketcard1.jpg' %}" class="card-img-top">
+                      <h5 class="card-title">Cricket</h5>
+                      <p class="card-text">Predict the result of upcoming spine-chilling IPL action.</p>
+                      <a href="#" class="btn btn-primary">Predict</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card text-white bg-dark mb-3" style="text-align: center;">
+                    <div class="card-body">
+                      <img src="{% static 'images/footballcard1.jpg' %}" class="card-img-top">
+                      <h5 class="card-title">Football</h5>
+                      <p class="card-text">Predict the result of upcoming Premier League game</p>
+                      <a href="#" class="btn btn-primary">Predict</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+        </div>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">About</h1>
+            <p class="lead">This webapp allows you to predict winning team of a particular match using various statistical methods and machine learning algorithms.</p>
+            <p class="lead">Support for the following sports are provided:-</p>
+            <ul>
+              <li class="list-unstyled">Basketball</li>
+              <li class="list-unstyled">Cricket</li>
+              <li class="list-unstyled">Football</li>
+            </ul>
+          </div>
+        </div>
+
+    </body>
+</html>

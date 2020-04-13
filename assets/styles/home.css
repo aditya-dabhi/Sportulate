@@ -1,0 +1,13 @@
+.margin{
+    margin-top:100px;
+  }
+
+  body{
+    background-color: black;
+  }
+.back{
+    background-image: url('images/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 800px;
+  }  
