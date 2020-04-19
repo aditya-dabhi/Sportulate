@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/bb-style.css' %}">
+        <script src="{% static 'scripts/bb-script.js' %}"></script>
+        <title>Sportulate - Match Predictions</title>
+    </head>
+    <body>
+
+        <div class="hd">
+            <img src="{% static 'images/logo1.jpg' %}" class="img-fluid rounded mx-auto d-block">
+        </div>
+        <div class="back">
+            <div class="container" id="content" style="margin-left: 150px;">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="text-white display-4">Predict the result of upcoming NBA action</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="follow-button">
+                        <button type="button" class="btn btn-outline-danger" onclick="smoothScroll(document.getElementById('main-form'))">Predict Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main-form">
+            <div class="container">
+                <div id="input-data">
+                    <div class="row">
+                        <div class="col-6 text-white text-center">
+                            <h1>HEADING</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <form method="POST">
+                                <label for="picking_team1" class="text-white">Select Team 1 : </label>
+                                <select name="cars" class="custom-select">
+                                    <option selected>Select a Team</option>
+                                    <option value="ATL">Atlanta Hawks</option>
+                                    <option value="BOS">Boston Celtics</option>
+                                    <option value="BKN">Brooklyn Nets</option>
+                                    <option value="GSW">Golden State Warriors</option>
+                                    <option value="fiat">Fiat</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                                <label for="picking_team2" class="text-white">Select Team 2 : </label>
+                                <select name="cars" class="custom-select">
+                                    <option selected>Select a Team</option>
+                                    <option value="volvo">Golden State Warriors</option>
+                                    <option value="fiat">Fiat</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                                <input type="submit" class="btn btn-danger btn-lg" value="Submit" style="margin-top: 50px;">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
