@@ -2,7 +2,7 @@
     background-color: black;
 }
 .back {
-    background-image: url('/static/images/bb.jpg');
+    background-image: url("football1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 634px;
@@ -19,7 +19,7 @@
 
 #main-form{
     padding-top: 100px;
-    background-image: url('/static/images/back.jpg');
+    background-image: url("hazard.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 754px;
@@ -28,3 +28,4 @@ label{
     font-size: x-large;
     padding-top: 50px;
 }
+
