@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/footballstyle.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/cricstyle.css' %}">
         <script src="{% static 'scripts/bb-script.js' %}"></script>
         <title>Sportulate - Match Predictions</title>
     </head>
@@ -17,12 +17,12 @@
             <div class="container" id="content" style="margin-left: 150px;">
                 <div class="row">
                     <div class="col-6">
-                        <h3 class=" text-white display-4" id="intro">Predict the result of upcoming Premier League game</h3>
+                        <h3 class=" text-white display-4" id="intro">Predict the result of upcoming spine chilling IPL action</h3>
                     </div>
                 </div>
                 <div class="row">
                     <div class="follow-button">
-                        <button type="button" class="btn btn-outline-danger" onclick="smoothScroll(document.getElementById('main-form'))">Predict Now</button>
+                        <button type="button" class="btn btn-outline-warning" onclick="smoothScroll(document.getElementById('main-form'))">Predict Now</button>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
             <div class="container">
                 <div id="input-data">
                     <div class="row">
-                        <div class="col-6 text-white text-center">
+                        <div class="col-6 text-dark text-center">
                             <h1>CHOOSE YOUR TEAMS</h1>
                         </div>
                     </div>
@@ -40,21 +40,21 @@
                         <div class="col-6">
                             <form method="POST">
                                 {% csrf_token %}
-                                <label for="picking_team1" class="text-white">Team 1 : </label>
+                                <label for="picking_team1" class="text-dark">Team 1 : </label>
                                 <select name="cars" class="custom-select">
                                     <option selected>Select a Team</option>
                                     {% for team in team %}
                                         <option value="{{team}}">{{team}}</option>
                                     {% endfor %}
                                 </select>
-                                <label for="picking_team2" class="text-white">Team 2 : </label>
+                                <label for="picking_team2" class="text-dark">Team 2 : </label>
                                 <select name="cars" class="custom-select">
                                     <option selected>Select a Team</option>
                                     {% for team in team %}
                                         <option value="{{team}}">{{team}}</option>
                                     {% endfor %}
                                 </select>
-                                <input type="submit" class="btn btn-primary btn-lg" value="Submit" style="margin-top: 50px;">
+                                <input type="submit" class="btn btn-warning btn-lg" value="Submit" style="margin-top: 50px;">
                             </form>
                         </div>
                     </div>

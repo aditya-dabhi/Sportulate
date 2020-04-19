@@ -2,7 +2,7 @@
     background-color: black;
 }
 .back {
-    background-image: url('/static/images/football1.jpg');
+    background-image: url('/static/images/purplegrad1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 634px;
@@ -19,7 +19,7 @@
 
 #main-form{
     padding-top: 100px;
-    background-image: url('/static/images/hazard.jpg');
+    background-image: url('/static/images/cricdown.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 754px;

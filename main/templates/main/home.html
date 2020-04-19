@@ -11,7 +11,7 @@
     <body>
 
         <div class="back">
-            <img src="{% static 'images/logo1.jpg' %}" class="img-fluid rounded mx-auto d-block">
+            <a href="{% url 'main-home' %}"><img src="{% static 'images/logo1.jpg' %}" class="img-fluid rounded mx-auto d-block"></a>
 
             <div class="container margin">
 
@@ -34,7 +34,7 @@
                       <img src="{% static 'images/cricketcard1.jpg' %}" class="card-img-top">
                       <h5 class="card-title">Cricket</h5>
                       <p class="card-text">Predict the result of upcoming spine-chilling IPL action.</p>
-                      <a href="#" class="btn btn-primary">Predict</a>
+                      <a href="{% url 'cricket-home' %}" class="btn btn-primary">Predict</a>
                     </div>
                   </div>
                 </div>
