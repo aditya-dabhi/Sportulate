@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/bbstye.css' %}">
-        <script src="{% static 'scripts/bb-scrit.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/bbstyle.css' %}">
+        <script src="{% static 'scripts/bb-script.js' %}"></script>
         <title>Sportulate - Match Predictions</title>
     </head>
     <body>
@@ -39,17 +39,14 @@
                     <div class="row">
                         <div class="col-6">
                             <form method="POST">
-                                <label for="picking_team1" class="text-white">Select Team 1 : </label>
+                                <label for="picking_team1" class="text-white">Team 1 : </label>
                                 <select name="cars" class="custom-select">
                                     <option selected>Select a Team</option>
-                                    <option value="ATL">Atlanta Hawks</option>
-                                    <option value="BOS">Boston Celtics</option>
-                                    <option value="BKN">Brooklyn Nets</option>
-                                    <option value="GSW">Golden State Warriors</option>
-                                    <option value="fiat">Fiat</option>
-                                    <option value="audi">Audi</option>
+                                    {% for t, team in teams.items%}
+                                        <option value="{{t}}">{{team}}</option>
+                                    {% endfor %}
                                 </select>
-                                <label for="picking_team2" class="text-white">Select Team 2 : </label>
+                                <label for="picking_team2" class="text-white">Team 2 : </label>
                                 <select name="cars" class="custom-select">
                                     <option selected>Select a Team</option>
                                     <option value="volvo">Golden State Warriors</option>
