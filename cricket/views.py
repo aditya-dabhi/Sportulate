@@ -33,7 +33,7 @@ def results(request):
         return render(request, 'cricket/cricresults.html', {
             'teams': [team1, team2],
             'results': [result[0], result[1]],
-            'background_color' : [back1, back2]
+            'background_color': [back1, back2]
         })
 
 
