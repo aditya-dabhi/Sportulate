@@ -24,7 +24,7 @@ def sim(team1, team2):
     team1win = 0
     team2win = 0
     matchcount = 0
-    for i in range(5000):
+    for i in range(1000):
         gm = GameSim(team1, team2, data, oeravg, deravg, tempoavg)
         if gm[0] > gm[1]:
             team1win += 1
@@ -33,7 +33,7 @@ def sim(team1, team2):
         else:
             matchcount -= 1
         matchcount += 1
-    team1win = (team1win/matchcount)*100
-    team2win = (team2win/matchcount)*100
+    team1win = round((team1win/matchcount)*100, 2)
+    team2win = round((team2win/matchcount)*100, 2)
     re = [team1win, team2win]
     return re

@@ -24,7 +24,7 @@ def sim(team1, team2):
     team1win = 0
     team2win = 0
     draw = 0
-    for i in range(10000):
+    for i in range(1000):
         gm = GameSim(team1, team2,data, leagueHGS, leagueHGC, leagueAGS, leagueAGC)
         if gm[0] > gm[1]:
             team1win += 1
@@ -32,8 +32,8 @@ def sim(team1, team2):
             team2win += 1
         else:
             draw += 1
-    team1win = (team1win / 10000) * 100
-    team2win = (team2win / 10000) * 100
-    draw = (draw/10000) * 100
+    team1win = round((team1win / 1000) * 100, 2)
+    team2win = round((team2win / 1000) * 100, 2)
+    draw = round((draw/1000) * 100, 2)
     re = [team1win, team2win, draw]
     return re
