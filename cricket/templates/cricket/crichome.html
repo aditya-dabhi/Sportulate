@@ -43,15 +43,15 @@
                                 <label for="picking_team1" class="text-dark">Home Team : </label>
                                 <select name="team1" class="custom-select">
                                     <option selected>Select a Team</option>
-                                    {% for team in team %}
-                                        <option value="{{team}}">{{team}}</option>
+                                    {% for team in teams %}
+                                        <option value="{{team.name}}">{{team.name}}</option>
                                     {% endfor %}
                                 </select>
                                 <label for="picking_team2" class="text-dark">Away Team : </label>
                                 <select name="team2" class="custom-select">
                                     <option selected>Select a Team</option>
-                                    {% for team in team %}
-                                        <option value="{{team}}">{{team}}</option>
+                                    {% for team in teams %}
+                                        <option value="{{team.name}}">{{team.name}}</option>
                                     {% endfor %}
                                 </select>
                                 <input type="submit" class="btn btn-warning btn-lg" value="Submit" style="margin-top: 50px;">

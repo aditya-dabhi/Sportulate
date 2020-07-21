@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . import simulator
+from .models import CricTeam
 
 team = [
     'Chennai Super Kings', 'Delhi Capitals', 'Kings XI Punjab', 'Kolkata Knight Riders',
@@ -24,13 +25,14 @@ def results(request):
         team1 = request.POST['team1']
         team2 = request.POST['team2']
         result = simulator.sim(team1, team2)
-        if colour_code[team1][0] == colour_code[team2][0]:
-            back1 = colour_code[team1][1]
-            back2 = colour_code[team2][3]
+        if CricTeam.objects.filter(name=team1).first().primary_color_name == CricTeam.objects.filter(
+                name=team2).first().primary_color_name:
+            back1 = CricTeam.objects.filter(name=team1).first().primary_color_code
+            back2 = CricTeam.objects.filter(name=team2).first().secondary_color_code
         else:
-            back1 = colour_code[team1][1]
-            back2 = colour_code[team2][1]
-        return render(request, 'cricket/cricresults.html', {
+            back1 = CricTeam.objects.filter(name=team1).first().primary_color_code
+            back2 = CricTeam.objects.filter(name=team2).first().primary_color_code
+        return render(request, 'basketball/bbresults.html', {
             'teams': [team1, team2],
             'results': [result[0], result[1]],
             'background_color': [back1, back2]
@@ -39,6 +41,6 @@ def results(request):
 
 def home(request):
     context = {
-        'team': team
+        'teams': CricTeam.objects.all()
     }
     return render(request, 'cricket/crichome.html', context)
